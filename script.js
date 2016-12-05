@@ -67,3 +67,23 @@ function addInstance(){
   })
   document.getElementById('form-add').reset();
 }
+
+function load()
+{
+  var url = "funct.php";
+  var buscado = (document).getElementById('input').value;
+  $.ajax({
+    type:"post",
+    url:url,
+    data:{method:"load",id:buscado},
+    success:function(datos){
+      $("#tbody").html(datos);
+    }
+  })
+}
+
+function click()
+{
+  console.log("REEP");
+
+}

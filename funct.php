@@ -8,8 +8,12 @@
       case 'modify':
         modify();
         break;
-      case 'add';
+      case 'add':
         add();
+        break;
+      case 'load':
+        load();
+        break;
       default:
         # code...
         break;
@@ -56,4 +60,11 @@
       echo '<script>parent.window.location.reload(true);</script>';
       return $result;
     }
+
+    function load()
+    {
+      
+
+    }
+
 ?>
