@@ -49,3 +49,21 @@ function deleteInstance(clicked){
 
   })
 }
+
+function addInstance(){
+  var url="funct.php";
+  var rut = (document).getElementById('inputRut').value;
+  var name = (document).getElementById('inputNombre').value;
+  var lastName = (document).getElementById('inputApellido').value;
+  var age = (document).getElementById('inputEdad').value;
+  var department = (document).getElementById('inputDepartamento').value;
+  $.ajax({
+    type:"post",
+    url:url,
+    data:{method:'add',id:rut,name:name,lastName:lastName,age:age,department:department},
+    success:function(datos){
+      $("#mostrardatos").html(datos);
+    }
+  })
+  document.getElementById('form-add').reset();
+}
