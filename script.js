@@ -68,22 +68,30 @@ function addInstance(){
   document.getElementById('form-add').reset();
 }
 
-function load()
+function loadProfesor()
 {
   var url = "funct.php";
   var buscado = (document).getElementById('input').value;
   $.ajax({
     type:"post",
     url:url,
-    data:{method:"load",id:buscado},
+    data:{method:"loadProfesor",id:buscado},
     success:function(datos){
-      $("#tbody").html(datos);
+      $("#main-table").html(datos);
     }
   })
 }
 
-function click()
+function loadCarrera()
 {
-  console.log("REEP");
-
+  var url = "funct.php";
+  var buscado = (document).getElementById('inputCarrera').value;
+  $.ajax({
+    type:"post",
+    url:url,
+    data:{method:"loadCarrera",id:buscado},
+    success:function(datos){
+      $("#main-table").html(datos);
+    }
+  })
 }
