@@ -84,7 +84,7 @@
     </div>
     <div class="modal-footer">
       <button type="button"class="btn btn-seconday" data-dismiss="modal">Cancelar</button>
-      <button style="margin-right:10px;" type="button"class="btn btn-primary" data-dismiss="modal" onclick="addInstance();">Aceptar</button>
+      <button style="margin-right:10px;" type="button"class="btn btn-primary" data-dismiss="modal" onclick="addProfesor();">Aceptar</button>
     </div>
   </div>
 </div>

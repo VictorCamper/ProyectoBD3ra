@@ -29,13 +29,13 @@
     <hr>
       <div class="row">
     <div class="col-lg-6">
-      <button type="button" data-toggle="modal" data-target=".modalAdd" class="btn btn-primary">Agregar carrera</button>
+      <button type="button" data-toggle="modal" data-target=".modalAdd" class="btn btn-primary">Agregar alumno</button>
     </div>
     <div class="col-lg-6">
       <div class="input-group">
-        <input type="text" class="form-control" id="inputCarrera" placeholder="Codigo carrera">
+        <input type="text" class="form-control" id="inputRutAlumno" placeholder="Rut Alumno">
         <span class="input-group-btn">
-          <button class="btn btn-secondary" onclick="loadCarrera()" type="button">Buscar carrera</button>
+          <button class="btn btn-secondary" onclick="loadAlumno()" type="button">Buscar alumno</button>
         </span>
       </div>
     </div>
@@ -44,9 +44,9 @@
 
     <script src="script.js"></script>
     <script>
-        loadCarrera();
+        loadAlumno();
     </script>
-    <div class="container" id="main-table-carrera">
+    <div class="container" id="main-table-alumno">
 
     </div>
 <div class="modal fade bd-example modalAdd" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
@@ -56,24 +56,28 @@
       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hiden="true">&times;</span>
       </button>
-      <h4 class="modal-title" id="myModalLabel">Agregar instancia Carrera</h4>
+      <h4 class="modal-title" id="myModalLabel">Agregar instancia Alumno</h4>
     </div>
     <div class="modal-body">
       <form class="form" id="form-add">
         <div class="form-group">
-          <label for="inputCodCarrera">Código Carrera</label>
-          <input type="integer" class="form-control" id="inputCodCarrera" placeholder="Código Carrera">
+          <label for="inputMatricula">Número de matricula</label>
+          <input type="integer" class="form-control" id="inputMatricula" placeholder="Número de matricula">
         </div>
         <div class="form-group">
-          <label for="inputNombreCarrera">Nombre</label>
-          <input type="text"  class="form-control" id="inputNombreCarrera" placeholder="Nombre">
+          <label for="inputNombreAlumno">Nombre</label>
+          <input type="text"  class="form-control" id="inputNombreAlumno" placeholder="Nombre">
         </div>
+        <!--<div class="form-group">
+          <label for="inputCarreraPertenece">Carrera a la que pertenece</label>
+          <input type="integer" class="form-control" id="inputCarreraPertenece" placeholder="Código Carrera">
+        </div>-->
       </form>
 
     </div>
     <div class="modal-footer">
       <button type="button"class="btn btn-seconday" data-dismiss="modal">Cancelar</button>
-      <button style="margin-right:10px;" type="button"class="btn btn-primary" data-dismiss="modal" onclick="addCarrera();">Aceptar</button>
+      <button style="margin-right:10px;" type="button"class="btn btn-primary" data-dismiss="modal" onclick="addAlumno();">Aceptar</button>
     </div>
   </div>
 </div>
